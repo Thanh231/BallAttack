@@ -49,11 +49,11 @@ public class Enemy1 : MonoBehaviour
         }
         // rb.AddForce(dir * currentSpeed, ForceMode.Acceleration);
 
-        if (rb.velocity.magnitude > 0.001f)
+        if (rb.linearVelocity.magnitude > 0.001f)
         {
-            Vector3 moveDir = rb.velocity.normalized;
+            Vector3 moveDir = rb.linearVelocity.normalized;
             Vector3 rotationAxis = Vector3.Cross(Vector3.up, moveDir).normalized;
-            float rotationAngle = rb.velocity.magnitude * 3 * Time.fixedDeltaTime * Mathf.Rad2Deg / model.transform.localScale.x;
+            float rotationAngle = rb.linearVelocity.magnitude * 3 * Time.fixedDeltaTime * Mathf.Rad2Deg / model.transform.localScale.x;
             model.transform.Rotate(rotationAxis, rotationAngle, Space.World);
         }
     }

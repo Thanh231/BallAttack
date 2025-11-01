@@ -36,11 +36,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (rb.velocity.magnitude > 0.01f)
+        if (rb.linearVelocity.magnitude > 0.01f)
         {
-            Vector3 moveDir = rb.velocity.normalized;
+            Vector3 moveDir = rb.linearVelocity.normalized;
             Vector3 rotationAxis = Vector3.Cross(Vector3.up, moveDir).normalized;
-            float rotationAngle = rb.velocity.magnitude * 30f * Time.deltaTime * Mathf.Rad2Deg / model.transform.localScale.x;
+            float rotationAngle = rb.linearVelocity.magnitude * 30f * Time.deltaTime * Mathf.Rad2Deg / model.transform.localScale.x;
             model.transform.Rotate(rotationAxis, rotationAngle, Space.World);
         }
     }
@@ -51,8 +51,8 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 moveInput = input.GetDirection();
             Vector3 moveDir = new Vector3(moveInput.x, 0f, moveInput.y).normalized;
-            Vector3 targetVelocity = new Vector3(moveDir.x * maxSpeed, rb.velocity.y, moveDir.z * maxSpeed);
-            rb.velocity = Vector3.Lerp(rb.velocity, targetVelocity, Time.fixedDeltaTime * 10f);
+            Vector3 targetVelocity = new Vector3(moveDir.x * maxSpeed, rb.linearVelocity.y, moveDir.z * maxSpeed);
+            rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, targetVelocity, Time.fixedDeltaTime * 10f);
         }
     }
 
@@ -64,8 +64,8 @@ public class PlayerController : MonoBehaviour
             if (otherRb == null) return;
 
             Vector3 normal = (transform.position - col.transform.position).normalized;
-            Vector3 v1 = rb.velocity;
-            Vector3 v2 = otherRb.velocity;
+            Vector3 v1 = rb.linearVelocity;
+            Vector3 v2 = otherRb.linearVelocity;
 
             float m1 = rb.mass;
             float m2 = otherRb.mass;
