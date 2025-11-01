@@ -1,18 +1,18 @@
 {
   "context": {
-    "projectPath": "D:/GitHub/BallAttack/Packages",
+    "projectPath": "D:/Ball/BallAttack/Packages",
     "unityVersion": "6000.0.42f1"
   },
   "inputs": [
-    "D:\\GitHub\\BallAttack\\Packages\\manifest.json",
-    "D:\\GitHub\\BallAttack\\Packages\\packages-lock.json",
+    "D:\\Ball\\BallAttack\\Packages\\manifest.json",
+    "D:\\Ball\\BallAttack\\Packages\\packages-lock.json",
     "D:\\Hub\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
     "com.unity.inputsystem@1.13.1": {
       "name": "com.unity.inputsystem",
       "displayName": "Input System",
-      "resolvedPath": "D:\\GitHub\\BallAttack\\Library\\PackageCache\\com.unity.inputsystem@e2c83221d2dc",
+      "resolvedPath": "D:\\Ball\\BallAttack\\Library\\PackageCache\\com.unity.inputsystem@e2c83221d2dc",
       "fingerprint": "e2c83221d2dc3fc990b017cbd3f9d0742649c8a8",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.13.1",
@@ -22,7 +22,7 @@
     "com.unity.multiplayer.center@1.0.0": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
-      "resolvedPath": "D:\\GitHub\\BallAttack\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
+      "resolvedPath": "D:\\Ball\\BallAttack\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
       "fingerprint": "f3fb577b3546594b97b8cc34307cd621f60f1c73",
       "editorCompatibility": "6000.0.0a1",
       "version": "1.0.0",
@@ -32,7 +32,7 @@
     "com.unity.ugui@2.0.0": {
       "name": "com.unity.ugui",
       "displayName": "Unity UI",
-      "resolvedPath": "D:\\GitHub\\BallAttack\\Library\\PackageCache\\com.unity.ugui@9496653a3df6",
+      "resolvedPath": "D:\\Ball\\BallAttack\\Library\\PackageCache\\com.unity.ugui@9496653a3df6",
       "fingerprint": "9496653a3df6648f8e3a165cac05bba08c614150",
       "editorCompatibility": "2019.2.0a1",
       "version": "2.0.0",
