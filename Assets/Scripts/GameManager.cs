@@ -41,6 +41,11 @@ public class GameManager : MonoBehaviour
         {
             enemyMap.Add(enemyPrefabs[i], false);
         }
+
+        if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
+        {
+            joyStick.SetActive(true);
+        }
     }
 
     public int HighScore
@@ -62,10 +67,6 @@ public class GameManager : MonoBehaviour
         if (!player.gameObject.activeInHierarchy)
         {
             SpawPlayer();
-            if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
-            {
-                joyStick.SetActive(true);
-            }
         }
         if (!isInit)
         {
@@ -145,6 +146,7 @@ public class GameManager : MonoBehaviour
         stageNumber = 0;
         EventManager.ResetGame?.Invoke();
         StartCoroutine(ShowMenu());
+        Debug.Log("123123");
     }
     private IEnumerator ShowMenu()
     {
@@ -279,8 +281,8 @@ public class GameManager : MonoBehaviour
             }
             else if (other.gameObject.CompareTag("Player"))
             {
-                if(!isEndGame)
-                {  
+                if (!isEndGame)
+                {
                     AudioController.ins.PlaySound(AudioController.ins.aiDeath);
                     EndGame();
                 }
