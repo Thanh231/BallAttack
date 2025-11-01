@@ -67,6 +67,10 @@ public class GameManager : MonoBehaviour
         if (!player.gameObject.activeInHierarchy)
         {
             SpawPlayer();
+            if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
+            {
+                joyStick.SetActive(true);
+            }
         }
         if (!isInit)
         {
