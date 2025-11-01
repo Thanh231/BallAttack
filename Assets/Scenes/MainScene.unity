@@ -385,7 +385,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tik om te spelen
+  m_Text: Tap to play
 --- !u!222 &68134467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -563,7 +563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &129385545
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1332,7 +1332,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Overslaan '
+  m_Text: Skip
 --- !u!222 &918962110
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -78,11 +78,11 @@ public class GameManager : MonoBehaviour
             string text = "";
             if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
             {
-                text = "Beweeg je bal met de joystick en Stoot andere ballen van het speelveld af ";
+                text = "Move your ball with joystick and knock other balls off the arena";
             }
             else if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
             {
-                text = "Beweeg je bal met WASD en Stoot andere ballen van het speelveld af";
+                text = "Move your ball with WASD and knock other balls off the arena";
             }
             EventManager.ShowTutorial?.Invoke(text);
         }
@@ -242,7 +242,7 @@ public class GameManager : MonoBehaviour
             if (other.gameObject.CompareTag("Enemy"))
             {
                 isInit = false;
-                EventManager.ShowTutorial?.Invoke("Nu, laten we vechten!!!");
+                EventManager.ShowTutorial?.Invoke("Now, Let's fight");
 
                 // Add point
                 if (enemyMap.ContainsKey(other.gameObject))
